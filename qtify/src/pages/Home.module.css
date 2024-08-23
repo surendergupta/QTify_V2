@@ -1,0 +1,7 @@
+.main{
+    width: 1440px;
+    height: 100vh;
+    display: block;
+    margin: 0 auto;
+    background-color: #000;
+}
