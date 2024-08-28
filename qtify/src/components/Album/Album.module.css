@@ -1,0 +1,11 @@
+.card{
+    width: 159px;
+    height: 232px;
+    border-radius: 10px 10px 0px 0px !important;
+    background-color: transparent !important;
+}
+.cardMedia{
+    width: 159px;
+    height: 170px;
+    border-radius: 10px 10px 0px 0px !important;
+}

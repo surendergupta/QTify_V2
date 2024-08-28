@@ -1,7 +1,28 @@
 .main{
     width: 1440px;
-    height: 100vh;
+    height: auto;
     display: block;
     margin: 0 auto;
     background-color: #000;
+}
+
+.sectionContainer
+{    
+    height: auto;
+    color: #fff;
+    padding: 16px;
+}
+.sectionTitle
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.albumgrid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Defines a maximum of 6 columns */
+    gap: 10px; /* Spacing between cards */
+    margin-top: 10px; /* Ensuring proper vertical spacing between title and grid */
 }
