@@ -1,0 +1,56 @@
+.carouselContainer {
+    position: relative;
+    width: 1408px !important;
+}
+
+.swiperContainer {
+    width: 100%;
+
+}
+
+.swiperSlide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiperButtonPrev,
+.swiperButtonNext {
+  color: #fff; /* Adjust color as needed */
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swiperButtonPrev.hidden,
+.swiperButtonNext.hidden {
+  display: none; /* Completely hide the buttons */
+}
+
+.swiperButtonPrev{
+    position: absolute;    
+    left: 0px;
+    top: 90px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.swiperButtonNext{
+    position: absolute;    
+    right: 0px;
+    top: 90px;
+    z-index: 99999;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .swiperButtonPrev,
+    .swiperButtonNext {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  

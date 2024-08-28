@@ -6,12 +6,9 @@ import styles from "./Album.module.css";
 import Chip from '@mui/material/Chip';
 import { Typography } from '@mui/material';
 const Album = ({album}) => {
-  const { title, slug, description, image: imageAlbum, id, follows, songs } = album;
-  console.log(slug);
-  console.log(songs);
+  const { title, description, image: imageAlbum, id, follows } = album;
   return (
     <>
-    {/* console.log(album) */}
     <Card className={styles.card} key={id}>
       <CardMedia 
         className={styles.cardMedia}        
