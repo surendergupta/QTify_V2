@@ -40,7 +40,7 @@ const Home = () => {
     useEffect(() => {
         const fetchNewAlbums = async () => {
             try {
-                const response = await axios.get('https://qtify-backend-labs.crio.do/albums/top', {
+                const response = await axios.get('https://qtify-backend-labs.crio.do/albums/new', {
                     headers: {
                         'Access-Control-Allow-Origin': '*',
                         'Content-Type': 'application/json'
