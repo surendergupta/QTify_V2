@@ -74,7 +74,7 @@ const Home = () => {
                     )}
                     {topAlbumsCollapsed && (
                         <div className={styles.albumgrid}>
-                            {topAlbums.slice(0, 7).map((album) => (
+                            {topAlbums.slice(0, 6).map((album) => (
                                 <Album key={album.id} album={album} />
                             ))}
                         </div>
@@ -96,7 +96,7 @@ const Home = () => {
                     )}
                     {newAlbumsCollapsed && (
                         <div className={styles.albumgrid}>
-                            {newAlbums.slice(0, 7).map((album) => (
+                            {newAlbums.slice(0, 6).map((album) => (
                                 <Album key={album.id} album={album} />
                             ))}
                         </div>
