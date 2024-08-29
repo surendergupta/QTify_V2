@@ -25,5 +25,4 @@ const Album = ({album}) => {
     </>
   )
 }
-
 export default Album
