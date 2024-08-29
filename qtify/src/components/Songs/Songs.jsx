@@ -28,6 +28,7 @@ const Songs = ({title}) => {
             'Content-Type': 'application/json'
           }
         });
+        console.log(songsResponse.data)
         setSongs(songsResponse.data);
         setGenres(['All', ...genresResponse.data.data]); // Add "All" to the beginning of the genres list
         setFilteredSongs(songsResponse.data); // Default to all songs

@@ -7,10 +7,6 @@ import Songs from '../components/Songs/Songs';
 import styles from "./Home.module.css";
 
 const Home = () => {
-    
-
-    
-
   return (
     <>
         <Box className={styles.main}>
