@@ -6,7 +6,7 @@ import styles from "./Album.module.css";
 import Chip from '@mui/material/Chip';
 import { Typography } from '@mui/material';
 const Album = ({album}) => {
-  const { title, description, image: imageAlbum, id, follows } = album;
+  const { title, description, image: imageAlbum, id, follows, likes } = album;
   return (
     <>
     <Card className={styles.card} key={id}>
@@ -16,7 +16,7 @@ const Album = ({album}) => {
         title={title}
       />
       <div style={{ padding: '4px 8px', borderRadius: '0px 0px 10px 10px', backgroundColor: '#fff'}} >
-        <Chip label={`${follows} Follows`}  variant="outlined" style={{ backgroundColor: 'var(--color-black)', color: '#fff'}} />
+        <Chip label={ follows ? `${follows} Follows` : `${likes} Likes` }  variant="outlined" style={{ backgroundColor: 'var(--color-black)', color: '#fff'}} />
       </div>
       <CardContent style={{ padding: '2px'}}>
         <Typography variant="p" component="div" style={{ color: '#fff', fontWeight: '400', fontSize: '14px', lineHeight: '21px' }}>{description}</Typography>

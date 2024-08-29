@@ -1,0 +1,12 @@
+.sectionContainer
+{    
+    height: auto;
+    color: #fff;
+    padding: 16px;
+}
+.sectionTitle
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

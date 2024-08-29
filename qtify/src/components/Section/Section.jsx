@@ -5,7 +5,7 @@ import Carousel from '../Carousel/Carousel';
 import Album from '../Album/Album';
 import styles from "./Section.module.css";
 
-const Section = ({ title, apiEndpoint }) => {
+const Section = ({ title, apiEndpoint, showAllButton = true }) => {
     const [topAlbums, setTopAlbums] = useState([]);
     const [topAlbumsCollapsed, setTopAlbumsCollapsed] = useState(true);
     const handleTopAlbumsCollapseToggle = () => {
@@ -22,25 +22,24 @@ const Section = ({ title, apiEndpoint }) => {
                 });
                 setTopAlbums(response.data); // Use response.data to get the data from the response
             } catch (error) {
-                console.error('Error fetching top albums:', error);
+                console.error(`Error fetching ${title}:`, error);
             }
         };
         fetchTopAlbums();
-    }, [apiEndpoint]);
+    }, [apiEndpoint, title]);
     
   return (
     <Box component="section" className={styles.sectionContainer}>
         <div className={styles.sectionTitle}>
             <h3>{title} </h3>
+            {showAllButton && (
             <div onClick={handleTopAlbumsCollapseToggle} style={{cursor: 'pointer', color: 'var(--color-primary)'}} className='pull-right'>{topAlbumsCollapsed ? 'Show all' : 'Collapse'}</div>
+            )}
         </div>
         <div className={styles.sectionTitle}>
             {topAlbumsCollapsed ? (
                 <div className={styles.albumgrid}>
-                    <Carousel items={topAlbums.map(album => <Album key={album.id} album={album} />)} />
-                    {/* {topAlbums.map((album) => (
-                        <Album key={album.id} album={album} />
-                    ))} */}
+                    <Carousel items={topAlbums.map(album => <Album key={album.id} album={album} />)} />                    
                 </div>
             ) : (
                 <div className={styles.albumgrid}>
